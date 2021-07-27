@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
+from rest_framework.viewsets import ViewSet
 from . models import *
 from rest_framework.response import Response
 from . serializer import *
@@ -37,5 +38,17 @@ class ReactView(APIView):
     def test_fucntion(self, request):
         serializer = test(data=request.test)
         return Response(serializer.data)
+
+class ReactViewset(ViewSet):
+
+    def translate(self, request):
+        trg = request.query_params.get('trg')
+        text = request.query_params.get('text')
+        if text:
+            translated = GoogleTranslator(source="en", target=trg).translate(text=text)
+            return Response(translated)
+        return Response('BAD RESPONSE')
+
+        # 
 
     

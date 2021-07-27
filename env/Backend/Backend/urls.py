@@ -21,6 +21,7 @@ from core.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('wel/', ReactView.as_view(), name="something"),
-    path('test/'),
+    path('wel/translate/', ReactViewset.as_view({"get": "translate"}), name="translate"),
+
 
 ]
