@@ -1,0 +1,78 @@
+.header {
+  padding: 0.5rem 0.5rem;
+
+  align-items: center;
+  text-align: right;
+}
+
+.LogoContainer {
+  display: flex;
+}
+
+.CustomNavLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+
+  width: 203px;
+  display: inline-block;
+  text-align: center;
+}
+.nav {
+  margin: 0;
+  padding: 15px 5%;
+  background-color: transparent;
+}
+
+.links {
+  justify-content: flex-end;
+}
+
+.SignupButton {
+  color: #fff;
+  transition: color 0.2s ease-in;
+  text-decoration: none;
+}
+.SignupButton:hover {
+  color: white;
+
+  text-decoration: none;
+}
+
+.LoginButton {
+  color: #da4459;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+.LoginButton:hover {
+  color: #da4459;
+  text-decoration: none;
+}
+
+.Large {
+  font-size: 1.2rem;
+  color: #fc8e9e;
+  font-weight: bold;
+  transition: color 0.2s ease-in;
+  text-decoration: none;
+}
+.Large:hover {
+  color: #f8a026;
+  text-underline-position: under;
+  text-decoration: #f8a026;
+}
+
+@media only screen and (min-width: 768px) {
+  .mx-navbar {
+    margin: auto 14rem;
+  }
+
+  .Large {
+    margin: 1.25rem 2rem;
+  }
+}
+@media only screen and (max-width: 411px) {
+  .CustomNavLink {
+    width: 150px;
+  }
+}

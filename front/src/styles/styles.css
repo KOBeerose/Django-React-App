@@ -1,0 +1,145 @@
+.box {
+  background: linear-gradient(
+    180deg,
+    #fbcb6933 -0.16%,
+    #fbcb6933 -0.15%,
+    #fa81a933 61.41%,
+    rgba(250, 129, 169, 0) 98.97%
+  );
+  background-position: top;
+}
+.transparent-box {
+  background: transparent;
+}
+/*@font-face {
+    font-family: "Open Sans Light";
+    src: url("/fonts/Open-Sans-Light.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url("/fonts/Open-Sans-Bold.ttf") format("truetype");
+    font-style: normal;
+}*/
+
+body,
+html,
+a {
+  font-family: "Open Sans Light", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a:hover {
+  color: #da4459;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border: 0;
+  background: rgb(241, 242, 243);
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  width: 100%;
+  padding: 1rem 1.25rem;
+}
+focus-within {
+  background: none;
+  box-shadow: #2e186a 0px 0px 0px 1px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans Bold", sans-serif;
+  font-weight: bold;
+  color: #da4459;
+  font-size: 56px;
+  line-height: 1.18;
+
+  /*@media only screen and (max-width: 414px) {
+    font-size: 32px;
+  }*/
+}
+h6 {
+  font-family: "Open Sans Bold", sans-serif;
+  font-weight: bold;
+  color: #da4459;
+  font-size: 36px;
+  line-height: 1.18;
+
+  /*@media only screen and (max-width: 414px) {
+    font-size: 32px;
+  }*/
+}
+h5 {
+  font-family: "Open Sans Bold", sans-serif;
+  color: #fc8e9e;;
+  font-size: 56px;
+  line-height: 1.18;
+  /*@media only screen and (max-width: 890px) {
+    font-size: 47px;
+  }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 32px;
+  }*/
+}
+h5 > span {
+  font-weight: bold;
+}
+p {
+  color: #000;
+  font-size: 21px;
+  line-height: 1.41;
+  text-align: justify;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #2e186a;
+}
+hover {
+  color: #2e186a;
+}
+@media only screen and (max-width: 890px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h6 {
+    font-size: 47px;
+  }
+}
+*:focus {
+  outline: none;
+}
+
+.about-block-image svg {
+  text-align: center;
+}
+
+.ant-drawer-body {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 1.5rem;
+}
+
+.ant-drawer-content-wrapper {
+  width: 300px !important;
+}

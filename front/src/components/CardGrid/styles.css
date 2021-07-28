@@ -1,0 +1,57 @@
+.container {
+  text-align: center;
+}
+.styledCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 10px 40px 50px rgba(252, 146, 155, 0.25);
+  padding: 50px 20px 50px 20px;
+  width: fit-content;
+  height: 20rem;
+  margin: 1.5rem auto;
+}
+.styledCard:hover {
+  box-shadow: 0px 3px 50px #fc929b;
+}
+
+.image {
+  max-width: 70px;
+  padding-top: 30px;
+  padding-left: 10px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.title {
+  font-weight: bold;
+  padding: 0.5rem 0;
+  color: black;
+  text-align: left;
+}
+.text {
+  font-size: medium;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+}
+.section-title {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0 1.5rem 0;
+}
+.hrline {
+  border: 2px solid #000000;
+  width: 40px;
+  color: black;
+  opacity: 1;
+  margin: auto;
+  background-color: black;
+}
+.section-description {
+  margin-top: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: #7d7987;
+}

@@ -1,0 +1,6 @@
+.box.gradient {
+    background: linear-gradient(180deg, #FBCB6933 -0.16%, #FBCB6933 -0.15%, #FA81A933 61.41%, rgba(250, 129, 169, 0) 98.97%);
+}
+.box{
+    background: white;
+}
