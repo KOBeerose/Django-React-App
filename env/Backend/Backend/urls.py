@@ -23,6 +23,6 @@ urlpatterns = [
     path('api/', ReactView.as_view(), name="something"),
     path('api/translate/', ReactViewset.as_view({"get": "translate"}), name="translate"),
     path('api/text_to_sign/', ReactViewset.as_view({"get": "text_to_sign"}), name="text_to_sign"),
-    
+    path('api/pic_to_sign/', ReactViewset.as_view({"get": "pic_to_sign"}), name="pic_to_sign"),
 
 ]
