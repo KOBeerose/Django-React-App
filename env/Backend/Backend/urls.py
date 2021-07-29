@@ -20,8 +20,9 @@ from core.views import *
   
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('wel/', ReactView.as_view(), name="something"),
-    path('wel/translate/', ReactViewset.as_view({"get": "translate"}), name="translate"),
-    path('wel/text_to_sign/', ReactViewset.as_view({"get": "text_to_sign"}), name="text_to_sign"),
+    path('api/', ReactView.as_view(), name="something"),
+    path('api/translate/', ReactViewset.as_view({"get": "translate"}), name="translate"),
+    
+    
 
 ]

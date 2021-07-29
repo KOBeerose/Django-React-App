@@ -16,7 +16,11 @@ from deep_translator import (GoogleTranslator,
 import json
 from os import listdir
 from PIL import Image as PImage
-
+import pyrebase
+import cv2
+import numpy
+ 
+from tensorflow.keras.models import load_model
 # Create your views here.
   
 class ReactView(APIView):
@@ -58,41 +62,5 @@ class ReactViewset(ViewSet):
     
 
 
-    def loadImages(loc):
-        imagesList = listdir(loc)
-        for image in imagesList:
-            T_TO_S.update({
-                image[:-4]: image
-            })
 
-        return T_TO_S
-
-
-    T_TO_S = loadImages(loc)
-
-
-
-    def text_to_sign(self, request):
-        lettres=dict()
-        ArL=['ع','ال','ا','ب','د','ض','ض',' ','ف','ك','غ','ح','حا','ج','ك','خ','ل','ل','م','ن','ر','ص','س','ش','ت','تا','ظ','ذ','توت','و','ي','ي','ز']
-        i=0
-        for itm in T_TO_S.keys():
-            lettres.update({ArL[i]:itm})
-            i+=1
-        text = request.query_params.get('text')
-        t=list(text)
-        signs=[]
-        if t:
-            for e in t:
-                itm=lettres[e]
-                img=T_TO_S[itm]
-                signs.append(img)
-            return Response(signs)
-        return Response('BAD RESPONSE')
-
-        
-
-
-
-
-    
+   

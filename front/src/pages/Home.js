@@ -8,13 +8,15 @@ import RightContentBlock from "../components/ContentBlock/RightContentBlock/Righ
 import Pricing from "../components/Pricing/Pricing";
 import Carousel from "../components/Carousel/Carousel";
 import CardGrid from "../components/CardGrid/CardGrid";
-import App from "../components/App/App";
+import Text2Sign from "../components/Text2Sign/Text2Sign";
+import ReceivedText from "../components/ReceivedText/ReceivedText";
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   return (
     <div>
-      <App />
+      <Text2Sign />
+      <ReceivedText />
       <HeaderBox background="gradient">
         <Fade direction="right">
           <Row>
@@ -25,7 +27,7 @@ const Home = () => {
                 <span>
                   
                   ExpressIT, <br />
-                  Connect With The Universe!
+                  Connect with the Universe!
                 </span>
               </h5>
               <br />
