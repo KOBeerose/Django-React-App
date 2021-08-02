@@ -1,33 +1,44 @@
 import React, { Component } from 'react';
 
 class ReceivedText extends Component {
-    
-    state = {
-        signs : []
-    };
+    constructor(props) {
+        super(props);
 
-    
+        this.state = {
+            postId: null,
+            test1: [],
+            test2: []
+        };
+    }
+
     async componentDidMount() {
-        var input="31" ;
-        try { 
-            const res = await fetch('http://localhost:8000/api/pic_to_sign/?pic='+input);
-            const signs = await res.json();
-            this.setState({
-                signs
-            });
-        } catch (e) {
-            console.log(e);
-        }
+        // POST request using fetch with async/await
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: 'React POST Request Example' })
+        };
+        const response = await fetch('https://reqres.in/api/posts', requestOptions);
+        
+        const data = await response.json();
+
+        this.setState({ postId: data.id });
+        this.setState({ test1: response });
+
     }
 
     render() {
-        return(
+        const { postId } = this.state;
+        const { test1 } = this.state;
+        const { test2 } = this.state;
+        return (
             <div>
-                {this.state.signs.map(item => (
-                        <h1>{item}</h1>                   
-                ))} 
+                <h1>Returned Id: {postId}</h1>
+                <h1>{test2.map(home => <div>{home.name}</div>)}</h1>
+                
+
             </div>
-       );
+        );
     }
 }
 

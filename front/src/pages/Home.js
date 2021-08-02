@@ -27,7 +27,7 @@ const Home = () => {
                 <span>
                   
                   ExpressIT, <br />
-                  Connect with the Universe!
+                  Connect With The Universe!
                 </span>
               </h5>
               <br />

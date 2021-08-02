@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/text_to_sign/', ReactViewset.as_view({"get": "text_to_sign"}), name="text_to_sign"),
     path('api/pic_to_sign/', ReactViewset.as_view({"get": "pic_to_sign"}), name="pic_to_sign"),
 
+
 ]
