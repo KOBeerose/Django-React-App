@@ -16,26 +16,29 @@ class ReceivedText extends Component {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: 'React POST Request Example' })
+            body: JSON.stringify({ user: 'image' })
         };
-        const response = await fetch('https://reqres.in/api/posts', requestOptions);
-        
+        const response = await fetch('https://signs2text-l7k3kehv6a-uc.a.run.app/sign2text', requestOptions);
+        const res = await fetch('https://signs2text-l7k3kehv6a-uc.a.run.app/sign2text')
+        console.log(res)
         const data = await response.json();
-
+        console.log(data);
+        this.setState({ test2: data });
         this.setState({ postId: data.id });
         this.setState({ test1: response });
 
     }
 
     render() {
+
         const { postId } = this.state;
         const { test1 } = this.state;
         const { test2 } = this.state;
+        
         return (
             <div>
-                <h1>Returned Id: {postId}</h1>
-                <h1>{test2.map(home => <div>{home.name}</div>)}</h1>
-                
+                <h1>Returned Id: {test2}</h1>
+
 
             </div>
         );
